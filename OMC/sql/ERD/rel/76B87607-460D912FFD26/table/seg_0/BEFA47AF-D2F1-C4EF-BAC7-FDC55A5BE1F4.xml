@@ -1,0 +1,142 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BEFA47AF-D2F1-C4EF-BAC7-FDC55A5BE1F4" schemaObject="AD312CA1-C641-3DDE-02BD-03FEA48A3A6C" name="SHIPPING">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>SHIPPING</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>B27184F6-0B90-1086-57EE-ACF1B5338F84</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SHIPPING_ID" id="A29D78D3-8224-8022-25C9-92B5DAFE6BEF">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>SHIPPING</sourceObjSchema>
+<sourceObjName>SHIPPING_ID</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>9E8EB74A-C175-B0A6-821E-139E8184ADB2</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ORDER_ID" id="705BEB04-9B4F-C74C-7E7F-2FB9B3CB6B48">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>SHIPPING</sourceObjSchema>
+<sourceObjName>ORDER_ID</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>311F4086-5303-4F54-35DE-072385F940E1</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D71325A6-840C-DC1A-5C9E-650F4C62C3F2" referredColumn="316BD9EA-B004-6497-11BE-2CA4475DD6A3"/>
+</associations>
+</Column>
+<Column name="SHIPPING_DATE" id="8D8FD1CF-8612-B07B-09E5-40560CDE9120">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>SHIPPING</sourceObjSchema>
+<sourceObjName>SHIPPING_DATE</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>1D457A4A-0AC5-8E7E-DBC8-8EF0427C04D7</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TRACKING_NUMBER" id="1FB71828-E8FF-5A0F-D80B-ACC1675C069A">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>SHIPPING</sourceObjSchema>
+<sourceObjName>TRACKING_NUMBER</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>8CDAC419-C1E0-B0FF-1EE0-6AA3AEA3B967</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STATUS" id="6E0B499F-1C72-1DBF-97BB-88A9D95DAC8C">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>SHIPPING</sourceObjSchema>
+<sourceObjName>STATUS</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>9147CFC1-CC42-11C6-2138-24ACFDECFE97</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DELIVERY_COMPANY" id="95E0FCFF-1FEB-5983-8C86-241C6CC88A49">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>SHIPPING</sourceObjSchema>
+<sourceObjName>DELIVERY_COMPANY</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>AC7A1986-5D23-6E11-32CA-89E9C3476AEB</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="898E4340-4C87-2D10-CAEB-6C3C14EF6D3E" schemaObject="AD312CA1-C641-3DDE-02BD-03FEA48A3A6C" name="SHIPPING_PK">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>SYS_C008439</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>3C2F9C3C-027C-332E-39E0-05D64C2DE6DA</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A29D78D3-8224-8022-25C9-92B5DAFE6BEF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7781C12D-5E82-8452-9A03-71109074E057" name="FK_SHIPPING_ORDER">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="705BEB04-9B4F-C74C-7E7F-2FB9B3CB6B48"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

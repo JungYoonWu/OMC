@@ -1,0 +1,143 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3CC5731F-2EA1-3D69-AECF-841FE9847F50" schemaObject="AD312CA1-C641-3DDE-02BD-03FEA48A3A6C" name="PAYMENTS">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>PAYMENTS</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>A195BEB0-1182-4CE8-4D0C-14A9EF836E37</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PAYMENT_ID" id="B088CE6F-F27B-59E8-F1D4-7C9AB5F2C232">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>PAYMENTS</sourceObjSchema>
+<sourceObjName>PAYMENT_ID</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>31DB148A-6BE3-7C0B-AD7D-70B283FC9FDE</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ORDER_ID" id="B1EEBA54-167F-425D-4E6B-786FC5477686">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>PAYMENTS</sourceObjSchema>
+<sourceObjName>ORDER_ID</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>F300EB64-98A5-34A2-C1C6-DB822CD188D8</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7B7ACAE5-BAA5-53D6-BC2A-408FE966D29E" referredColumn="316BD9EA-B004-6497-11BE-2CA4475DD6A3"/>
+</associations>
+</Column>
+<Column name="AMOUNT" id="B81B1214-FBF1-B718-EB09-95D06766E8C7">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>PAYMENTS</sourceObjSchema>
+<sourceObjName>AMOUNT</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>BEAE3CEA-02E6-FC14-BC95-D7395878BE71</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PAYMENT_DATE" id="DD7DD642-6BFF-F6D9-B283-85D8F6E9D9E6">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>PAYMENTS</sourceObjSchema>
+<sourceObjName>PAYMENT_DATE</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>E35F2DEB-C6B0-6520-6C16-4A6E8532B303</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>sysdate</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PAYMENT_METHOD" id="F0D222F3-707D-3658-BB98-59207DECA5D5">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>PAYMENTS</sourceObjSchema>
+<sourceObjName>PAYMENT_METHOD</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>D19C76A4-9AB2-90BC-F99A-CD3699BC9840</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STATUS" id="6EECF998-9B41-2C36-9986-14853149D59D">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>PAYMENTS</sourceObjSchema>
+<sourceObjName>STATUS</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>A50091E3-707D-75E9-5330-EFB287D6EB2C</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="681C3CA9-E168-8B5B-7719-27E9C8C73D29" schemaObject="AD312CA1-C641-3DDE-02BD-03FEA48A3A6C" name="PAYMENTS_PK">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>SYS_C008437</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>A3670EC1-F4B8-F816-D362-04DB8A94D993</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B088CE6F-F27B-59E8-F1D4-7C9AB5F2C232"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8B565A50-76F8-D7DF-2CF2-47A8B7091E9B" name="FK_PAYMENT_ORDER">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B1EEBA54-167F-425D-4E6B-786FC5477686"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

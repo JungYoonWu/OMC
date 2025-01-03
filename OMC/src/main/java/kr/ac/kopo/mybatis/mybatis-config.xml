@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<properties resource="kr/ac/kopo/mybatis/db.properties" />
+
+	<typeAliases>
+		<typeAlias type="kr.ac.kopo.boardNotice.vo.BoardNoticeVO" alias="boardNoticeVO"/>
+		<typeAlias type="kr.ac.kopo.user.vo.UserVO" alias="userVO" />
+		<typeAlias type="kr.ac.kopo.user.vo.DoctorVO" alias="doctorVO"/>
+		<typeAlias type="kr.ac.kopo.boardReservation.vo.ReservationVO" alias="reservationVO" />
+		<typeAlias type="kr.ac.kopo.boardQnA.vo.InquiryVO" alias="inquiryVO" />
+		<typeAlias type="kr.ac.kopo.boardQnA.vo.ReplyVO" alias="replyVO" />
+		<typeAlias type="kr.ac.kopo.boardHerbal.vo.HerbalVO" alias="herbalVO" />
+		<typeAlias type="kr.ac.kopo.treatment.vo.TreatmentScheduleVO" alias="treatmentScheduleVO" />
+		<typeAlias type="kr.ac.kopo.treatment.vo.TreatmentRoomStatusVO" alias="treatmentRoomStatusVO" />
+		<typeAlias type="kr.ac.kopo.treatment.vo.DoctorTimelineVO" alias="doctorTimelineVO" />
+		<typeAlias type="kr.ac.kopo.treatment.vo.DoctorScheduleVO" alias="doctorScheduleVO" />
+		<typeAlias type="kr.ac.kopo.treatment.vo.DoctorScheduleParam" alias="doctorScheduleParam"/>
+	</typeAliases>
+
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.user}"/>
+        <property name="password" value="${jdbc.password}"/>
+      </dataSource>
+    </environment>
+  </environments>
+  
+  <mappers>
+	<mapper resource="common/db/boardNotice.xml"></mapper>
+	<mapper resource="common/db/user.xml"></mapper>
+	<mapper resource="common/db/reservation.xml"></mapper>
+	<mapper resource="common/db/qna.xml"></mapper>
+	<mapper resource="common/db/reply.xml"></mapper>
+	<mapper resource="common/db/herbal.xml"></mapper>
+	<mapper resource="common/db/treatment.xml"></mapper>
+  </mappers> 
+</configuration>

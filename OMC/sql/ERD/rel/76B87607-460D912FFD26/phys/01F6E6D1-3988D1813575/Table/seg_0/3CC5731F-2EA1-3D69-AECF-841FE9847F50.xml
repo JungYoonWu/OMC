@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="PAYMENTS" directorySegmentName="seg_0" id="3CC5731F-2EA1-3D69-AECF-841FE9847F50">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<schemaObject>AD312CA1-C641-3DDE-02BD-03FEA48A3A6C</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>B8266638-090E-60C9-1ABB-BDA74AEE9AF8</segment>
+<tableSpace>15FE23B5-7C3A-7092-50A9-1CBFD738CF3D</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="STATUS" id="6EECF998-9B41-2C36-9986-14853149D59D">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PAYMENT_ID" id="B088CE6F-F27B-59E8-F1D4-7C9AB5F2C232">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ORDER_ID" id="B1EEBA54-167F-425D-4E6B-786FC5477686">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="AMOUNT" id="B81B1214-FBF1-B718-EB09-95D06766E8C7">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PAYMENT_DATE" id="DD7DD642-6BFF-F6D9-B283-85D8F6E9D9E6">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<defaultValue>sysdate</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="PAYMENT_METHOD" id="F0D222F3-707D-3658-BB98-59207DECA5D5">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_PAYMENT_ORDER" id="8B565A50-76F8-D7DF-2CF2-47A8B7091E9B">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PAYMENTS_PK" id="681C3CA9-E168-8B5B-7719-27E9C8C73D29">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<schemaObject>AD312CA1-C641-3DDE-02BD-03FEA48A3A6C</schemaObject>
+<segment>14856D72-F228-E55F-D057-E43E3B4EC250</segment>
+<tableSpace>15FE23B5-7C3A-7092-50A9-1CBFD738CF3D</tableSpace>
+<indexSegment>14856D72-F228-E55F-D057-E43E3B4EC250</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

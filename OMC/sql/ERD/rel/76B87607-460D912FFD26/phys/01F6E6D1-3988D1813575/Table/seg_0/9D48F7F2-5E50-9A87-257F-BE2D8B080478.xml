@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="USERS" directorySegmentName="seg_0" id="9D48F7F2-5E50-9A87-257F-BE2D8B080478">
+<createdBy>User</createdBy>
+<createdTime>2024-12-16 23:25:31 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<schemaObject>AD312CA1-C641-3DDE-02BD-03FEA48A3A6C</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>B8266638-090E-60C9-1ABB-BDA74AEE9AF8</segment>
+<tableSpace>15FE23B5-7C3A-7092-50A9-1CBFD738CF3D</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="USER_NO" id="3185A445-7EFA-836B-5355-FA917FD196AD">
+<createdBy>User</createdBy>
+<createdTime>2024-12-16 23:25:31 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EMAIL" id="44C6EE2A-F57C-4213-41F4-847FF4814A54">
+<createdBy>User</createdBy>
+<createdTime>2024-12-16 23:25:31 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ROLE_ID" id="731F82CC-B93B-0430-A231-BA63672E5654">
+<createdBy>User</createdBy>
+<createdTime>2024-12-16 23:25:31 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USER_ID" id="8C261F6B-C486-1EA4-7D80-74B40FA6F4B3">
+<createdBy>User</createdBy>
+<createdTime>2024-12-16 23:25:31 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PASSWORD" id="8DDD073B-C980-5C57-3ABD-40ED96DAED4A">
+<createdBy>User</createdBy>
+<createdTime>2024-12-16 23:25:31 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PHONE" id="D255A7A5-0440-A87F-031F-54CDD1AE6036">
+<createdBy>User</createdBy>
+<createdTime>2024-12-16 23:25:31 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NAME" id="DEBA21C0-3F66-34A3-A6E0-080306726FF8">
+<createdBy>User</createdBy>
+<createdTime>2024-12-16 23:25:31 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_ROLES" id="AAFC65BB-72CA-26AC-F7F0-14DED4522548">
+<createdBy>User</createdBy>
+<createdTime>2024-12-16 23:31:05 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="USERS_PK" id="6CD8CF62-DB86-AD7E-67DB-FA36EEAF2CB7">
+<createdBy>User</createdBy>
+<createdTime>2024-12-16 23:25:32 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<schemaObject>AD312CA1-C641-3DDE-02BD-03FEA48A3A6C</schemaObject>
+<segment>14856D72-F228-E55F-D057-E43E3B4EC250</segment>
+<tableSpace>15FE23B5-7C3A-7092-50A9-1CBFD738CF3D</tableSpace>
+<indexSegment>14856D72-F228-E55F-D057-E43E3B4EC250</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="075BB3AD-7054-D7AB-0C91-139F679BB0D2" containerWithKeyObject="9D48F7F2-5E50-9A87-257F-BE2D8B080478" localFKIndex="AAFC65BB-72CA-26AC-F7F0-14DED4522548" name="FK_ROLES">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>FK_ROLES</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-16 23:31:05 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>E50DCBD3-30F1-5550-CA28-8A67FA275F59</importedID>
+<referredTableLongName>SYSTEM.ROLES</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>0C587DBD-652D-041E-4489-42F7E9DA339A</referredTableID>
+<keyObject>33512686-08CD-66C5-1683-31C1C42366F5</keyObject>
+<referredKeyID>33512686-08CD-66C5-1683-31C1C42366F5</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>ROLE_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

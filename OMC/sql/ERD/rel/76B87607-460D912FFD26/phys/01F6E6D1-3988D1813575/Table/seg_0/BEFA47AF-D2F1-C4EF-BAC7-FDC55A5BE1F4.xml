@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="SHIPPING" directorySegmentName="seg_0" id="BEFA47AF-D2F1-C4EF-BAC7-FDC55A5BE1F4">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<schemaObject>AD312CA1-C641-3DDE-02BD-03FEA48A3A6C</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>B8266638-090E-60C9-1ABB-BDA74AEE9AF8</segment>
+<tableSpace>15FE23B5-7C3A-7092-50A9-1CBFD738CF3D</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="TRACKING_NUMBER" id="1FB71828-E8FF-5A0F-D80B-ACC1675C069A">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STATUS" id="6E0B499F-1C72-1DBF-97BB-88A9D95DAC8C">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ORDER_ID" id="705BEB04-9B4F-C74C-7E7F-2FB9B3CB6B48">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SHIPPING_DATE" id="8D8FD1CF-8612-B07B-09E5-40560CDE9120">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DELIVERY_COMPANY" id="95E0FCFF-1FEB-5983-8C86-241C6CC88A49">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SHIPPING_ID" id="A29D78D3-8224-8022-25C9-92B5DAFE6BEF">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_SHIPPING_ORDER" id="7781C12D-5E82-8452-9A03-71109074E057">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="SHIPPING_PK" id="898E4340-4C87-2D10-CAEB-6C3C14EF6D3E">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<schemaObject>AD312CA1-C641-3DDE-02BD-03FEA48A3A6C</schemaObject>
+<segment>14856D72-F228-E55F-D057-E43E3B4EC250</segment>
+<tableSpace>15FE23B5-7C3A-7092-50A9-1CBFD738CF3D</tableSpace>
+<indexSegment>14856D72-F228-E55F-D057-E43E3B4EC250</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

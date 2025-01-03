@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9F2D9F04-F0CD-5C38-9EFA-2C70EFA81249" schemaObject="AD312CA1-C641-3DDE-02BD-03FEA48A3A6C" name="CART">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>CART</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>73A218CB-3A3E-064C-2FF3-C4A511896466</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CART_ID" id="C219834A-EFA9-3D12-5065-1DD9A3F2051C">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>CART</sourceObjSchema>
+<sourceObjName>CART_ID</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>EEAE0D38-6116-62A2-F749-0B6F1990E4AC</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USER_ID" id="14C7F5F7-B5F2-45A0-43EC-A3E8B8B66721">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>CART</sourceObjSchema>
+<sourceObjName>USER_ID</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>33851C9A-FE95-E5DE-94C7-1754920B761E</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="88203F52-6222-D2C8-8D30-3F4471A0642A" referredColumn="8C261F6B-C486-1EA4-7D80-74B40FA6F4B3"/>
+</associations>
+</Column>
+<Column name="REG_DATE" id="795930C8-92BF-1315-9299-3482A1501A66">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>CART</sourceObjSchema>
+<sourceObjName>REG_DATE</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>861E6A14-D88F-6B84-F7B4-5DB883336B7D</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>sysdate</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="735FDFFE-277F-99E3-7D26-6499442A3EB8" schemaObject="AD312CA1-C641-3DDE-02BD-03FEA48A3A6C" name="CART_PK">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>SYS_C008421</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>79555F1C-B28C-0B2E-1B04-436F42B994AA</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C219834A-EFA9-3D12-5065-1DD9A3F2051C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C50BEF0F-4DFA-3510-3FA2-090050DFB8E0" name="FK_CART_USER">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="14C7F5F7-B5F2-45A0-43EC-A3E8B8B66721"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

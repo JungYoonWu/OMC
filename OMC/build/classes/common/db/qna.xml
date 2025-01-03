@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.InquiryDAO">
+
+	<select id="selectAllInquiry" resultType="inquiryVO">
+		select inquiry_id inquiryID, user_id userID, title, content, reg_date regDate, status
+		  from inquiries
+		 <where>
+		 	<if test="userID">
+		 		user_id = #{userID}
+		 	</if>
+		 </where>
+	</select>
+	
+	<select id="selectInquiryByUserID" resultType="inquiryVO">
+		select inquiry_id inquiryID, user_id userID, title, content, reg_date regDate, status
+		  from inquiries
+		 where user_id = #{userID}
+		   and inquiry_id = #{inquiryID}
+	</select>
+	
+	<select id="selectInquiryByStatus" resultType="inquiryVO">
+		select inquiry_id inquiryID, user_id userID, title, content, reg_date regDate, status
+		  from inquiries
+		 where status = #{status}
+	</select>
+	
+	<select id="selectAllInquiryByPaging" parameterType="map" resultType="inquiryVO">
+		select inquiry_id inquiryID, user_id userID, title, content, reg_date regDate, status
+		  from (
+		  		select a.*, rownum as rnum
+		  		  from (
+		  		        select *
+		  		          from inquiries
+		  		         order by inquiry_id desc
+		  		       ) a
+		  		 where rownum &lt;= (#{offset} + #{limit})
+		       )
+		  where rnum &gt; #{offset}
+	</select>
+	
+	<select id="countAllInquiry" resultType="int">
+		select count(*) from inquiries
+	</select>
+	
+	<select id="selectMyInquiryByPaging" parameterType="map" resultType="inquiryVO">
+		select inquiry_id inquiryID, user_id userID, title, content, reg_date regDate, status
+		  from (
+		  		select a.*, rownum as rnum
+		  		  from (
+		  		  		select *
+		  		  		  from inquiries
+		  		  		 where user_id = #{userID}
+		  		  		 order by inquiry_id desc
+		  		       ) a
+		  		 where rownum &lt;= (#{offset} + #{limit})
+		  	   )
+		 where rnum &gt; #{offset}
+	</select>
+	
+	<select id="countMyInquiry" parameterType="string" resultType="int">
+		select count(*)
+		  from inquiries
+		 where user_id = #{userID}
+	</select>
+	
+	<insert id="insertInquiry" parameterType="inquiryVO">
+	insert into inquiries
+	(
+	inquiry_id, user_id, title, content, reg_date, status
+	)
+	values
+	(
+	seq_inquiry_no.nextval, #{userID}, #{title}, #{content}, sysdate, '미응답'
+	)
+	</insert>
+</mapper>

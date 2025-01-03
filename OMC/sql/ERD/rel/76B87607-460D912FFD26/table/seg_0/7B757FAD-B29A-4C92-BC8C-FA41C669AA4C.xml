@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7B757FAD-B29A-4C92-BC8C-FA41C669AA4C" schemaObject="AD312CA1-C641-3DDE-02BD-03FEA48A3A6C" name="HERBAL_MEDICINES">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>HERBAL_MEDICINES</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>61906FA5-ECA1-3A84-6E33-E51F0704F0E4</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MEDICINE_ID" id="D71144EF-269A-7DDB-7E74-D702D266531C">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>HERBAL_MEDICINES</sourceObjSchema>
+<sourceObjName>MEDICINE_ID</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>2FBF0361-0F5A-4B97-4823-6B1B5B8A2640</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAME" id="B8DBC8D6-4231-159A-9F88-D6E596AF936D">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>HERBAL_MEDICINES</sourceObjSchema>
+<sourceObjName>NAME</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>11FF2353-F388-165F-95DD-876A2EA95276</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRIPTION" id="DC0A24FB-A80F-4BFE-5C54-98F3697BBB80">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>HERBAL_MEDICINES</sourceObjSchema>
+<sourceObjName>DESCRIPTION</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>8A1C92AA-13D8-AB76-8411-F7519DF2CEC9</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SEASONAL_RECOMMENDATION" id="E6CCEEC8-AC9D-C261-22EB-3D7E2823D686">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>HERBAL_MEDICINES</sourceObjSchema>
+<sourceObjName>SEASONAL_RECOMMENDATION</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>06E8522C-EB28-EBCF-2B1F-A7B783FA8907</importedID>
+<constraintName>SYS_C008403</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;N&apos;" description=""/>
+<valueDef value="&apos;Y&apos;" description=""/>
+</listOfValues>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="76447BF4-8B62-6ED5-C41B-087F54FFC540" schemaObject="AD312CA1-C641-3DDE-02BD-03FEA48A3A6C" name="HERBAL_MEDICINES_PK">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>SYS_C008404</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>61E22A81-45E8-931E-EC67-14E7FDC3C5FD</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D71144EF-269A-7DDB-7E74-D702D266531C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

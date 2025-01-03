@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.ReservationDAO">
+
+	<select id="selectAllReservation" resultType="reservationVO">
+		select reservation_id reservationID, user_id userID, reservation_date reservationDate
+		      ,reservation_time reservationTime, status, treatment_id treatmentID, bed_id bedID
+		  from reservations
+		 where status in ('YES', 'ING', 'DONE')
+		 order by reservation_date, reservation_time
+	</select>
+	
+	<select id="selectWeekReservation" resultType="reservationVO">
+		select reservation_id reservationID, user_id userID, reservation_date reservationDate
+		      ,reservation_time reservationTime, status, treatment_id treatmentID
+		  from reservations
+		 where status='YES'
+		   and reservation_date between sysdate and sysdate+7
+		 order by reservation_date, reservation_time	
+	</select>
+	
+	<select id="selectReservationByUserID" resultType="reservationVO">
+		select reservation_id reservationID, user_id userID, reservation_date reservationDate
+		      ,reservation_time reservationTime, status, treatment_id treatmentID
+		  from reservations
+		 where reservation_id = #{reservation_id}
+		   and status='YES'
+	</select>
+	
+	<select id="selectMyReservation" resultType="reservationVO">
+		select reservation_id reservationID, user_id userID, reservation_date reservationDate
+		      ,reservation_time reservationTime, status, treatment_id treatmentID
+		  from reservations
+		 where user_id = #{userID}
+		   and status='YES'
+	</select>
+	
+	<select id="selectReservationByReservationID" resultType="reservationVO">
+		SELECT 
+        r.reservation_id reservationID, 
+        r.user_id userID, 
+        TO_CHAR(r.reservation_date, 'yyyy-mm-dd') AS reservationDate,
+        TO_CHAR(r.reservation_time, 'HH24:MI:SS') AS reservationTime, 
+        r.status, 
+        r.treatment_id AS treatmentID,
+        r.doctor_id AS doctorID,
+        r.bed_id AS bedID,
+        u.name AS doctorName
+    FROM reservations r
+    LEFT JOIN users u ON r.doctor_id = u.user_id
+    WHERE r.reservation_id = #{reservationID}
+      AND r.status in ('YES', 'ING', 'DONE')
+	</select>
+	
+	<select id="countReservations" parameterType="map" resultType="int">
+		select count(*)
+		  from reservations
+		 where doctor_id = #{doctorID}
+		   and reservation_time = to_timestamp(#{reservationTime}, 'yyyy-MM-dd HH24:MI:SS')
+		   and status = 'YES'
+	</select>
+	
+	<select id="selectBedIDByReservationID" resultType="int">
+		select bed_id bedID
+		  from reservations
+		 where reservation_id = #{reservationID}
+	</select>
+	
+	<select id="checkIsDoubleReservation" parameterType="map" resultType="int">
+		select count(*)
+		  from reservations
+		 where user_id = #{userID}
+		   and to_char(reservation_date, 'yyyy-mm-dd') = #{reservationDate}
+	</select>
+	
+	<select id="countAllReservation" resultType="int">
+		select count(*)
+		  from reservations
+		 where status in ('YES', 'ING', 'DONE')	
+	</select>
+	
+	<select id="selectAllReservationByPaging" parameterType="map" resultType="reservationVO">
+		select *
+		  from (
+		  		select rownum as rn, t.*
+		  		  from (
+		  		  		select reservation_id reservationID
+		  		  		, user_id userID
+		  		  		, reservation_date reservationDate
+		  		  		, reservation_time reservationTime
+		  		  		, status
+		  		  		, treatment_id treatmentID
+		  		  		, bed_id bedID
+		  		  		  from reservations
+		  		  		 where status in ('YES', 'ING', 'DONE')
+		  		  		 order by reservation_date, reservation_time
+		  		       ) t
+		  		  where rownum &lt;= #{endRow}
+		  	   )
+		   where rn &gt;= #{startRow}
+	</select>
+	
+	<update id="updateReservationBedID" parameterType="map">
+		update reservations
+		   set bed_id = #{bedID}, status = #{status}
+		 where reservation_id = #{reservationID}
+	</update>
+	
+	<update id="updateReservationStatus" parameterType="map">
+		update reservations
+		   set status = #{status}
+		 where reservation_id = #{reservationID}
+	</update>
+	
+	<insert id="insertReservation" parameterType="reservationVO">
+		insert into reservations
+		(
+		reservation_id, user_id, reservation_date, reservation_time, status, treatment_id, doctor_id
+		)
+		values
+		(
+		seq_reserv_id_no.nextval ,#{userID}, #{reservationDate, jdbcType=DATE}, #{reservationTime, jdbcType=TIMESTAMP}, 'YES', #{treatmentID}, #{doctorID}
+		)
+	</insert>
+</mapper>

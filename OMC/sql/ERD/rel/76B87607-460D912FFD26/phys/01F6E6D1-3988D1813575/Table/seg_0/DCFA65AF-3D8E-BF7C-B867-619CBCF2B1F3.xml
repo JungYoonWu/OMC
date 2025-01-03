@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="ORDER_ITEMS" directorySegmentName="seg_0" id="DCFA65AF-3D8E-BF7C-B867-619CBCF2B1F3">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<schemaObject>AD312CA1-C641-3DDE-02BD-03FEA48A3A6C</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>B8266638-090E-60C9-1ABB-BDA74AEE9AF8</segment>
+<tableSpace>15FE23B5-7C3A-7092-50A9-1CBFD738CF3D</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ORDER_ID" id="4115665D-87F5-242E-27A7-080392FE0F0D">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MEDICINE_ID" id="64E637FF-4584-6F96-61CC-296F8D3F6222">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ORDER_ITEM_ID" id="A50F635D-2869-BA14-72AB-A8797BB4A449">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PRICE" id="A922614A-AB08-2271-3EE7-FC03A755E6ED">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="QUANTITY" id="E5642755-101E-CD33-A7EE-DF6D593152AF">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_ORDER_ITEM_MEDICINE" id="1548CE15-EFE9-230E-254D-C4DBEEBAE333">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_ORDER_ITEM_ORDER" id="CE7A4F06-2F3A-7D2C-D3E1-6D554E17E810">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="ORDER_ITEMS_PK" id="FFB37DD7-F04D-C2D2-83FF-AD15773B1541">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<schemaObject>AD312CA1-C641-3DDE-02BD-03FEA48A3A6C</schemaObject>
+<segment>14856D72-F228-E55F-D057-E43E3B4EC250</segment>
+<tableSpace>15FE23B5-7C3A-7092-50A9-1CBFD738CF3D</tableSpace>
+<indexSegment>14856D72-F228-E55F-D057-E43E3B4EC250</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

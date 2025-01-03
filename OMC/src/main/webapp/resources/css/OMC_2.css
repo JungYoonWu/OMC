@@ -1,0 +1,970 @@
+#treatmentRoomStatus {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4개씩 1줄 */
+    gap: 20px; /* 요소 간 간격 */
+    padding: 20px;
+}
+/* doctor-section 스타일: 연한 갈색 계열 */
+.doctor-section {
+    border: 2px solid #d2b48c; /* 테두리 색: 연한 갈색 */
+    border-radius: 8px; /* 모서리 둥글게 */
+    background-color: #fdf5e6; /* 배경색: 에크루 (부드러운 갈색 톤) */
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 효과 */
+}
+
+.doctor-section h3 {
+    color: #8b4513; /* 제목 색상: 진한 갈색 */
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e6ccb2; /* 연한 갈색 선 */
+    padding-bottom: 5px;
+}
+
+/* time-slots 스타일 */
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* 그리드 레이아웃 */
+    gap: 10px; /* 그리드 간격 */
+    margin-top: 10px;
+}
+
+/* time-box 스타일: 상태에 따라 연한 갈색 톤 적용 */
+.time-box {
+    border: 1px solid #e6ccb2; /* 테두리: 연한 갈색 */
+    border-radius: 5px;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.time-box.available {
+    background-color: #f5f5dc; /* 배경: 베이지색 */
+    color: #8b4513; /* 글씨: 진한 갈색 */
+}
+
+.time-box.reserved {
+    background-color: #d2b48c; /* 배경: 탠 색상 */
+    color: #fff; /* 글씨: 흰색 */
+}
+
+.time-box.done {
+    background-color: #bfb49b; /* 배경: 흐린 갈색 */
+    color: #fff; /* 글씨: 흰색 */
+}
+
+.time-box:hover {
+    transform: scale(1.05); /* 마우스 호버 시 확대 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.bed {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    background-color: #FFF; /* 배경색 추가 */
+}
+
+.status {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 10px; /* 의사 이름과의 간격 조정 */
+}
+
+.status.ing {
+    background-color: green;
+}
+
+.status.done {
+    background-color: gray;
+}
+
+.status.empty {
+    background-color: white;
+    border: 1px solid #000;
+}
+
+.doctor {
+    font-weight: bold;
+    color: #333;
+}
+
+/* 공통 섹션 스타일 */
+.section-reservation {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* 예약 상세 및 리스트 항목 스타일 */
+.reservation-details, .reservationList {
+    padding: 15px;
+    background-color: #FFF5E1;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #8B4513;
+}
+
+.reservationList span {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.reservation-empty {
+    text-align: center;
+    font-size: 18px;
+    color: #D9534F;
+    font-weight: bold;
+}
+
+.reservationList a {
+    text-decoration: none;
+    color: #FFA500;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.reservationList a:hover {
+    color: #E59400;
+}
+
+/* 예약 버튼 스타일 */
+#reserveBtn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+#reserveBtn:hover {
+    background-color: #45A049;
+}
+
+#reserveBtn a {
+    color: white;
+    text-decoration: none;
+}
+
+/* 폼 스타일 */
+.reservation-form label {
+    font-weight: bold;
+    color: #8B4513;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.reservation-form input, .reservation-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+}
+
+.reservation-form button {
+    padding: 10px 20px;
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reservation-form button:hover {
+    background-color: #E59400;
+}
+
+
+/* 공통 섹션 스타일 */
+/* 공통 섹션 스타일 */
+.section-container {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* 폼 스타일 */
+.form-container label {
+    font-weight: bold;
+    color: #8B4513;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-container input, .form-container select, .form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+}
+
+.form-container button, .form-container input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover, .form-container input[type="submit"]:hover {
+    background-color: #E59400;
+}
+
+/* 사용자 정보 스타일 */
+.userInfo div {
+    padding: 10px;
+    border: 1px solid #DDD;
+    background-color: #FFF5E1;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #8B4513;
+}
+
+/* 로그인 박스 스타일 */
+.loginBox {
+    margin: 0 auto;
+    padding: 20px;
+    width: 50%;
+    background-color: #FFF5E1;
+    border: 1px solid #DDD;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.loginBox div {
+    margin-bottom: 15px;
+}
+
+.loginBox input[type="text"], .loginBox input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+}
+
+.loginBox #loginBtn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.loginBox #loginBtn:hover {
+    background-color: #45A049;
+}
+
+/* 에러 메시지 */
+.errorMsg {
+    color: #D9534F;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/* 문의 상세 및 리스트 */
+.inquiry-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.inquiry-item {
+    padding: 15px;
+    background-color: #FFF5E1;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    color: #8B4513;
+    transition: background-color 0.3s ease;
+}
+
+.inquiry-item:hover {
+    background-color: #FFA500;
+    color: white;
+}
+
+/* 폼 스타일 */
+.inquiry-form label {
+    font-weight: bold;
+    color: #8B4513;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.inquiry-form input,
+.inquiry-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.inquiry-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.inquiry-form button:hover {
+    background-color: #45A049;
+}
+
+/* 버튼 링크 스타일 */
+.link-button {
+    padding: 10px 15px;
+    background-color: #FFA500;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.link-button:hover {
+    background-color: #E59400;
+}
+
+/* 로그인 메시지 */
+.login-message {
+    text-align: center;
+    font-size: 18px;
+    color: #D9534F;
+    font-weight: bold;
+}
+
+
+/* 공지 목록 컨테이너 스타일 */
+.list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.list-item {
+    padding: 15px;
+    background-color: #FFF5E1;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #8B4513;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.list-item:hover {
+    background-color: #FFA500;
+    color: white;
+}
+
+.list-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.list-button:hover {
+    background-color: #45A049;
+}
+
+
+/* 공지 상세 정보 스타일 */
+.notice-detail {
+    padding: 20px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    background-color: #FFF5E1;
+    margin: 20px auto;
+    width: 80%;
+    text-align: left;
+}
+
+.notice-detail div {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+.notice-detail a {
+    text-decoration: none;
+    color: #8B4513;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    background-color: #FFF;
+    transition: background-color 0.3s ease;
+}
+
+.notice-detail a:hover {
+    background-color: #FFA500;
+    color: white;
+}
+
+
+/* 폼 스타일 */
+.notice-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.notice-form label {
+    font-weight: bold;
+    color: #8B4513;
+    margin-bottom: 5px;
+}
+
+.notice-form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.notice-form button {
+    padding: 10px 20px;
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.notice-form button:hover {
+    background-color: #E59400;
+}
+
+/* 공통 섹션 스타일 */
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 개별 상품 스타일 */
+.herbal-item {
+    width: calc(33.33% - 20px);
+    background-color: #FFF5E1;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.herbal-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 상품명 스타일 */
+.herbalTitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #8B4513;
+    margin-bottom: 10px;
+}
+
+/* 버튼 스타일 */
+.herbal-button span {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #FFA500;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.herbal-button span:hover {
+    background-color: #E59400;
+}
+
+/* 상품 등록 버튼 스타일 */
+.herbal-add-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.herbal-add-button:hover {
+    background-color: #45A049;
+}
+
+/* "등록된 상품이 없습니다" 메시지 */
+.no-products {
+    text-align: center;
+    color: #D9534F;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+/* 공통 섹션 스타일 */
+section {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* 상품 상세 정보 스타일 */
+.herbal-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.herbal-detail div {
+    padding: 10px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    background-color: #FFF5E1;
+}
+
+.herbal-detail a {
+    text-decoration: none;
+    color: #8B4513;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.herbal-detail a span {
+    padding: 10px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    background-color: #FFF5E1;
+}
+
+.herbal-detail a:hover span {
+    background-color: #FFA500;
+    color: white;
+}
+
+/* "판매중인 상품이 없습니다" 메시지 */
+.no-product {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: #D9534F;
+    font-weight: bold;
+}
+
+/* 폼 스타일 */
+.herbal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #8B4513; /* 다크 브라운 */
+    font-size: 16px;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* 추천 여부 필드셋 스타일 */
+.form-fieldset {
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    padding: 10px;
+    color: #8B4513;
+}
+
+.form-fieldset legend {
+    font-weight: bold;
+}
+
+.form-radio-group {
+    margin-right: 15px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.form-radio-group input {
+    margin-right: 5px;
+}
+
+/* 버튼 스타일 */
+.form-submit {
+    background-color: #FFA500; /* 오렌지 */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-submit:hover {
+    background-color: #E59400; /* 다크 오렌지 */
+}
+
+/* 공통 네비게이션 박스 스타일 */
+.navBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #FFF5E1; /* 배경색 */
+    border-bottom: 2px solid #E5E5E5;
+    font-family: Arial, sans-serif;
+}
+
+.navBox span {
+    margin: 0 10px;
+}
+
+.navBox a {
+    text-decoration: none;
+    color: #8B4513; /* 글자 색 */
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navBox a:hover {
+    color: #E59400; /* 호버 색 */
+}
+
+.navBox img {
+    vertical-align: middle;
+    max-height: 50px;
+}
+
+/* 로그인 상태 메시지 스타일 */
+.navBox span:last-child {
+    color: #8B4513;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+/* 네비게이션 메뉴 간격 조정 */
+.navBox span:not(:last-child) {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+/* 반응형 네비게이션 */
+@media (max-width: 768px) {
+    .navBox {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .navBox span {
+        margin: 5px 0;
+    }
+}
+
+
+body.index-page {
+    font-family: Arial, sans-serif;
+    background-color: #FAF3E0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Index 섹션 스타일 */
+.index-notice-section,
+.index-herbal-section {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.index-notice-container,
+.index-herbal-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+/* 공지사항 및 한약 항목 스타일 */
+.notice-title,
+.herbal-title {
+    display: block;
+    padding: 15px;
+    background-color: #FFF5E1;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #8B4513;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.notice-title:hover,
+.herbal-title:hover {
+    background-color: #FFA500;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* 기사 섹션 스타일 */
+.index-intro-section {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Footer 스타일 */
+.footer {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+
+/* 푸터 */
+.index-footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #FFA500;
+    color: white;
+    font-size: 14px;
+}
+
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FAF3E0; /* Light beige for overall background */
+    color: #333;
+}
+
+/* Sections */
+section {
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #FFF5E1; /* Light cream for section background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+    color: #8B4513; /* Dark brown for headings */
+}
+
+/* Buttons */
+button, .btn-submit, .btn-register {
+    background-color: #FFA500; /* Orange */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .btn-submit:hover, .btn-register:hover {
+    background-color: #E59400; /* Darker orange for hover */
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"], textarea {
+    padding: 10px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+}
+
+label {
+    font-weight: bold;
+    color: #8B4513;
+}
+
+/* Inquiry List */
+.pg-inquiry-list__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pg-inquiry-list__item {
+    padding: 10px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    background-color: #FFF5E1;
+}
+
+.pg-inquiry-list__no-login {
+    text-align: center;
+    color: #D9534F; /* Bootstrap red for warnings */
+    font-weight: bold;
+}
+
+/* Reservation Details */
+.pg-reservation-detail__info, .pg-reservation-detail__no-data {
+    padding: 10px;
+    border: 1px solid #DDD;
+    background-color: #FFF5E1;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Notice Styles */
+.pg-notice-list__container, .pg-notice-detail__info {
+    border: 1px solid #CCC;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #FFF;
+}
+
+.pg-notice-list__item {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #FFF5E1;
+    border-radius: 5px;
+}
+
+/* Herbal Styles */
+.pg-herbal-list__container, .pg-herbal-detail__info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.pg-herbal-list__item {
+    padding: 15px;
+    border: 1px solid #CCC;
+    background-color: #FFF;
+    border-radius: 10px;
+    width: calc(33% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+}

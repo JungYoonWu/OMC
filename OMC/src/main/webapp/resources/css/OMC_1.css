@@ -1,0 +1,785 @@
+/* 공지 목록 컨테이너 스타일 */
+/* 공통 스타일 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+section {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* 치료실 상태 섹션 */
+#treatmentRoomStatus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#treatmentRoomStatus div {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+#treatmentRoomStatus span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+    position: relative;
+}
+
+#treatmentRoomStatus .status {
+    width: 60%;
+    height: 20%;
+    background-color: #ffcccb; /* 기본 상태 빨강 */
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+#treatmentRoomStatus .doctor {
+    width: 40%;
+    height: 20%;
+    background-color: #add8e6; /* 의사 표시 파랑 */
+    border-radius: 5px;
+}
+
+/* doctor-section 스타일: 연한 갈색 계열 */
+.doctor-section {
+    border: 2px solid #d2b48c; /* 테두리 색: 연한 갈색 */
+    border-radius: 8px; /* 모서리 둥글게 */
+    background-color: #fdf5e6; /* 배경색: 에크루 (부드러운 갈색 톤) */
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 효과 */
+}
+
+.doctor-section h3 {
+    color: #8b4513; /* 제목 색상: 진한 갈색 */
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e6ccb2; /* 연한 갈색 선 */
+    padding-bottom: 5px;
+}
+
+/* time-slots 스타일 */
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* 그리드 레이아웃 */
+    gap: 10px; /* 그리드 간격 */
+    margin-top: 10px;
+}
+
+/* time-box 스타일: 상태에 따라 연한 갈색 톤 적용 */
+.time-box {
+    border: 1px solid #e6ccb2; /* 테두리: 연한 갈색 */
+    border-radius: 5px;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.time-box.available {
+    background-color: #f5f5dc; /* 배경: 베이지색 */
+    color: #8b4513; /* 글씨: 진한 갈색 */
+}
+
+.time-box.reserved {
+    background-color: #d2b48c; /* 배경: 탠 색상 */
+    color: #fff; /* 글씨: 흰색 */
+}
+
+.time-box.done {
+    background-color: #bfb49b; /* 배경: 흐린 갈색 */
+    color: #fff; /* 글씨: 흰색 */
+}
+
+.time-box:hover {
+    transform: scale(1.05); /* 마우스 호버 시 확대 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.list-item {
+    padding: 15px;
+    background-color: #FFF5E1;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #8B4513;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.list-item:hover {
+    background-color: #FFA500;
+    color: white;
+}
+
+.list-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.list-button:hover {
+    background-color: #45A049;
+}
+
+
+/* 공지 상세 정보 스타일 */
+.notice-detail {
+    padding: 20px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    background-color: #FFF5E1;
+    margin: 20px auto;
+    width: 80%;
+    text-align: left;
+}
+
+.notice-detail div {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+.notice-detail a {
+    text-decoration: none;
+    color: #8B4513;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    background-color: #FFF;
+    transition: background-color 0.3s ease;
+}
+
+.notice-detail a:hover {
+    background-color: #FFA500;
+    color: white;
+}
+
+
+/* 폼 스타일 */
+.notice-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.notice-form label {
+    font-weight: bold;
+    color: #8B4513;
+    margin-bottom: 5px;
+}
+
+.notice-form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.notice-form button {
+    padding: 10px 20px;
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.notice-form button:hover {
+    background-color: #E59400;
+}
+
+/* 공통 섹션 스타일 */
+section {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* 폼 스타일 */
+.herbal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #8B4513; /* 다크 브라운 */
+    font-size: 16px;
+}
+
+.form-group input[type="text"],
+/* 공통 섹션 스타일 */
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 개별 상품 스타일 */
+.herbal-item {
+    width: calc(33.33% - 20px);
+    background-color: #FFF5E1;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.herbal-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 상품명 스타일 */
+.herbalTitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #8B4513;
+    margin-bottom: 10px;
+}
+
+/* 버튼 스타일 */
+.herbal-button span {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #FFA500;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.herbal-button span:hover {
+    background-color: #E59400;
+}
+
+/* 상품 등록 버튼 스타일 */
+.herbal-add-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.herbal-add-button:hover {
+    background-color: #45A049;
+}
+
+/* "등록된 상품이 없습니다" 메시지 */
+.no-products {
+    text-align: center;
+    color: #D9534F;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* 추천 여부 필드셋 스타일 */
+.form-fieldset {
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    padding: 10px;
+    color: #8B4513;
+}
+
+.form-fieldset legend {
+    font-weight: bold;
+}
+
+.form-radio-group {
+    margin-right: 15px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.form-radio-group input {
+    margin-right: 5px;
+}
+
+/* 버튼 스타일 */
+.form-submit {
+    background-color: #FFA500; /* 오렌지 */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-submit:hover {
+    background-color: #E59400; /* 다크 오렌지 */
+}
+
+/* 공통 네비게이션 박스 스타일 */
+.navBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #FFF5E1; /* 배경색 */
+    border-bottom: 2px solid #E5E5E5;
+    font-family: Arial, sans-serif;
+}
+
+.navBox span {
+    margin: 0 10px;
+}
+
+.navBox a {
+    text-decoration: none;
+    color: #8B4513; /* 글자 색 */
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navBox a:hover {
+    color: #E59400; /* 호버 색 */
+}
+
+.navBox img {
+    vertical-align: middle;
+    max-height: 50px;
+}
+
+/* 로그인 상태 메시지 스타일 */
+.navBox span:last-child {
+    color: #8B4513;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+/* 네비게이션 메뉴 간격 조정 */
+.navBox span:not(:last-child) {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+/* 반응형 네비게이션 */
+@media (max-width: 768px) {
+    .navBox {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .navBox span {
+        margin: 5px 0;
+    }
+}
+
+
+body.index-page {
+    font-family: Arial, sans-serif;
+    background-color: #FAF3E0;
+    margin: 0;
+    padding: 0;
+}
+
+/* 헤더 */
+.index-header {
+    padding: 15px;
+    background-color: #FFF5E1;
+    border-bottom: 1px solid #DDD;
+    text-align: center;
+    font-weight: bold;
+    color: #8B4513;
+}
+
+/* 공지 섹션 */
+.index-notice-section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+.notice-title {
+    font-size: 18px;
+    color: #333;
+    padding: 10px;
+    border-bottom: 1px solid #DDD;
+    transition: background-color 0.3s;
+}
+
+.notice-title:hover {
+    background-color: #FFF5E1;
+}
+
+/* 한약 섹션 */
+.index-herbal-section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+.herbal-title {
+    font-size: 18px;
+    color: #333;
+    padding: 10px;
+    border-bottom: 1px solid #DDD;
+    transition: background-color 0.3s;
+}
+
+.herbal-title:hover {
+    background-color: #FFF5E1;
+}
+
+/* 소개 섹션 */
+.index-intro-section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    text-align: center;
+    color: #8B4513;
+    font-size: 16px;
+}
+
+/* 푸터 */
+.index-footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #FFA500;
+    color: white;
+    font-size: 14px;
+}
+
+jsp1-header {
+    /* Styles for h1 */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp1-paragraph {
+    /* Styles for p */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp1-button {
+    /* Styles for button */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp2-main-container {
+    /* Styles for div.main-container */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp2-list-items {
+    /* Styles for ul.list-items */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp2-item {
+    /* Styles for li.item */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp3-form {
+    /* Styles for form */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp3-input-text {
+    /* Styles for input.text */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp3-input-submit {
+    /* Styles for input.submit */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp4-nav {
+    /* Styles for nav */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp4-link {
+    /* Styles for a.link */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp4-active {
+    /* Styles for span.active */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp5-header {
+    /* Styles for header */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp5-content {
+    /* Styles for section.content */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp5-footer {
+    /* Styles for footer */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp6-table {
+    /* Styles for table */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp6-header-cell {
+    /* Styles for th */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp6-data-cell {
+    /* Styles for td */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp7-article {
+    /* Styles for article */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp7-subheader {
+    /* Styles for h2 */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp7-quote {
+    /* Styles for blockquote */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp8-sidebar {
+    /* Styles for aside */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp8-menu {
+    /* Styles for nav.menu */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp8-menu-item {
+    /* Styles for li.menu-item */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp9-main {
+    /* Styles for main */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp9-figure {
+    /* Styles for figure */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp9-caption {
+    /* Styles for figcaption */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp10-video {
+    /* Styles for video */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp10-source {
+    /* Styles for source */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+jsp10-track {
+    /* Styles for track */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+

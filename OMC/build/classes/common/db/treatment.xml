@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.TreatmentDAO">
+
+	<select id="selectTreatmentSchedule" resultType="hashmap">
+		select *
+		  from reservations
+		 where reservation_date = #{date}
+	</select>
+	
+	<select id="selectTodayReservation" resultType="reservationVO">
+        SELECT 
+            r.reservation_id reservationID, r.user_id userID
+            , to_char(r.reservation_date, 'yyyy-mm-dd') as reservationDate
+            , to_char(r.reservation_time, 'yyyy-mm-dd HH24:MI:SS') as reservationTime
+            , r.status , r.treatment_id treatmentID, r.doctor_id doctorID
+            , r.bed_id bedID 
+            , d.name AS doctorName
+        FROM reservations r
+        JOIN omdoctor omd ON r.doctor_id = omd.user_id
+        JOIN users d ON omd.user_id = d.user_id
+        WHERE TO_CHAR(r.reservation_date, 'yyyy-mm-dd') = TO_CHAR(SYSDATE, 'yyyy-mm-dd')
+        ORDER BY r.reservation_time
+	</select>
+		
+	<select id="getTreatmentRoomStatus" resultType="treatmentRoomStatusVO">
+		select bed_id bedID, room_id roomID, bed_number bedNumber, status bedStatus
+		  from beds
+	</select>
+	
+	<select id="selectDoctorSchedule" parameterType="doctorScheduleParam" resultType="doctorScheduleVO">
+		select ds.schedule_id scheduleID, ds.doctor_id doctorID, ds.work_day workDay
+		      ,to_char(ds.work_start_time, 'HH24:MI:SS') as workStartTime
+		      ,to_char(ds.work_end_time, 'HH24:MI:SS') as workEndTime
+		  from doctor_schedule ds
+		       join omdoctor omd on omd.doctor_id = ds.doctor_id 
+		 where ds.work_day = #{workDay}
+		   and ds.doctor_id = #{doctorID}
+	</select>
+	
+	<select id="selectAllDoctors" resultType="userVO">
+		select m1.user_id userID, m1.name, m1.email, m1.phone, m2.role_name roleName, m1.user_no userNo, m1.role_id roleID
+		  from users m1
+		       join roles m2 on m2.role_id = m1.role_id
+		 where m1.role_id = 2
+	</select>
+	
+	<select id="selectOMDoctors" resultType="doctorVO">
+		select omd.doctor_id omdDoctorID, u.user_id userID, u.name doctorName
+		  from omdoctor omd
+		      join users u on omd.user_id = u.user_id
+		 where u.role_id = 2
+	</select>
+	
+	<select id="selectDoctorIdByUserID" resultType="int" parameterType="string">
+		select omd.doctor_id omdDoctorID
+		  from omdoctor omd
+		 where user_id = #{userID}
+	</select>
+	
+	<select id="selectUserIdByDoctorId" resultType="string" parameterType="int">
+		select omd.user_id userID
+		  from omdoctor omd
+		       join users u on u.user_id = omd.user_id
+		 where omd.doctor_id = #{modDoctorID}
+	</select>
+	
+	<select id="selectAllTreatmentRoomStatus" resultType="treatmentRoomStatusVO">
+		select bed_id bedID, room_id roomID, bed_number bedNumber, status bedStatus
+		  from beds
+	</select>
+	
+	<select id="findEmptyBed" resultType="treatmentRoomStatusVO">
+		select bed_id bedID, room_id roomID, bed_number bedNumber, status bedStatus
+		  from (
+				select *
+				  from beds
+				 where status = 'empty'
+				 order by bed_number		  
+		        )
+	        where rownum = 1
+	</select>
+	
+	<select id="selectEmptyBeds" resultType="treatmentRoomStatusVO">
+		select bed_id bedID, room_id roomID, bed_number bedNumber, status bedStatus
+		  from beds
+		 where status='empty'
+		 order by bed_number
+	</select>
+	
+	<select id="selectTreatmentRoomStatusByBedID" resultType="TreatmentRoomStatusVO" parameterType="int">
+		select bed_id bedID, room_id roomID, bed_number bedNumber, status bedStatus
+		  from beds
+		 where bed_id = #{bedID}
+	</select>
+	
+	<update id="updateBedStatus" parameterType="treatmentRoomStatusVO">
+		update beds
+		   set status = #{bedStatus}
+		 where bed_id = #{bedID}
+	</update>
+</mapper>

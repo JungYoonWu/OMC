@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="7B7ACAE5-BAA5-53D6-BC2A-408FE966D29E" containerWithKeyObject="3CC5731F-2EA1-3D69-AECF-841FE9847F50" localFKIndex="8B565A50-76F8-D7DF-2CF2-47A8B7091E9B" name="FK_PAYMENT_ORDER">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>FK_PAYMENT_ORDER</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>81229F1C-656C-22DC-F8A9-66AE246C4A03</importedID>
+<referredTableLongName>SYSTEM.ORDERS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>20044508-EEC1-7B14-CBF8-CB5360D15DAB</referredTableID>
+<keyObject>1B0F9DD8-1950-26CD-1E90-BEA6024F8C55</keyObject>
+<referredKeyID>1B0F9DD8-1950-26CD-1E90-BEA6024F8C55</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>ORDER_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

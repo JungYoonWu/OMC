@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.UserDAO">
+
+	<select id="selectAllUser" resultType="userVO">
+		select m1.user_id userID, m1.name, m1.email, m1.phone, m2.role_name roleName, m1.user_no userNo, m1.role_id roleID
+		  from users m1
+		      join roles m2 on m2.role_id = m1.role_id
+		 where m1.role_id = 1
+	</select>
+	
+	<select id="selectDoctorsByWorkDay" resultType="userVO">
+		select u.user_id userID, u.name, u.email, u.phone, role.role_name roleName, u.user_no userNo, u.role_id roleID
+		  from users u
+		       join omdoctor omd on omd.user_id = u.user_id
+		       join roles role on role.role_id = u.role_id
+		       join doctor_schedule ds on ds.doctor_id = omd.doctor_id
+		 where ds.work_day = #{workDay}
+		   and u.role_id = 2
+	</select>
+	
+	<select id="selectUserByType" resultType="userVO">
+		select m1.user_id userID, m1.name, m1.email, m1.phone, m2.role_name roleName, m1.user_no userNo, m1.role_id roleID 
+		  from users m1
+		      join roles m2 on m2.role_id = m1.role_id
+		 				   and m2.role_name = #{roleName}
+	</select>
+	
+	<select id="selectUserByRoleID" resultType="userVO">
+		select user_id userID, name, email, phone, user_no userNo, role_id roleID 
+		  from users
+		 where role_id = #{roleID}		
+	</select>
+	
+	<select id="selectUserByUserID" resultType="userVO">
+		select m1.user_id userID, m1.name, m1.email, m1.phone, m1.role_id roleID
+		  from users m1
+		       join roles m2 on m2.role_id = m1.role_id
+		 where m1.role_id = 1
+		   and m1.user_id = #{userID}
+	</select>
+	
+	<select id="selectUserLogin" resultType="userVO">
+		select user_id userID, name, email, phone, role_id roleID
+		  from users
+		 where user_id = #{userID}
+		   and password = #{password}
+	</select>
+	
+	<select id="selectDoctors" parameterType="int" resultType="doctorVO">
+		select omd.doctor_id doctorID, omd.user_id userID, u.name name
+		  from omdoctor omd
+		       join users u on u.user_id = omd.user_id
+		 where u.role_id = #{roleID}
+	</select>
+	
+	<insert id="insertPatientUser" parameterType="userVO">
+		insert into users
+		(
+		user_id, name, email, password, phone, role_id, user_no
+		)
+		values
+		(
+		#{userID},#{name},#{email},#{password},#{phone}, 1, seq_user_no.nextval
+		)
+	</insert>
+	
+</mapper>

@@ -1,0 +1,140 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="43854988-3930-4964-5746-98FDEA1BFEE5" schemaObject="AD312CA1-C641-3DDE-02BD-03FEA48A3A6C" name="CART_ITEMS">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>CART_ITEMS</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>1810BB8F-25D6-A290-C37E-436A10D7208B</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CART_ITEM_ID" id="CAFF8B22-E832-77D6-0ACD-3E8BC0CD69F4">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>CART_ITEMS</sourceObjSchema>
+<sourceObjName>CART_ITEM_ID</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>EFE9CE3F-F264-28FB-4FDB-7189229A774D</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CART_ID" id="7A279A72-C916-37AF-D0B0-A982F07B036A">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>CART_ITEMS</sourceObjSchema>
+<sourceObjName>CART_ID</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>8D9127C1-0A71-E8B2-D059-4AC723DC0325</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5AFDF1B3-EF41-AAEA-5FFF-E1027DD33767" referredColumn="C219834A-EFA9-3D12-5065-1DD9A3F2051C"/>
+</associations>
+</Column>
+<Column name="MEDICINE_ID" id="CF510B8E-FEBE-1842-3B9F-2C5D8840D299">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>CART_ITEMS</sourceObjSchema>
+<sourceObjName>MEDICINE_ID</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>371EA8F5-43A1-6770-6867-A25D383301DC</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D58A2227-4114-20F4-5B12-DD876F1DE476" referredColumn="D71144EF-269A-7DDB-7E74-D702D266531C"/>
+</associations>
+</Column>
+<Column name="QUANTITY" id="534B0404-B9BB-44AE-C49A-8FA51F60AF2C">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>CART_ITEMS</sourceObjSchema>
+<sourceObjName>QUANTITY</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>9411436F-CB66-46FA-74D0-577BB7281A94</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRICE" id="B31FDB3C-B2A0-0D22-A1DD-AFED60838E3B">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>CART_ITEMS</sourceObjSchema>
+<sourceObjName>PRICE</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>7B7F0A73-F2A3-13F2-096B-CC16F8B63276</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="41FDA528-87EC-0D69-1386-636585B54992" schemaObject="AD312CA1-C641-3DDE-02BD-03FEA48A3A6C" name="CART_ITEMS_PK">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>SYS_C008425</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>D1E4B2E9-0E5C-A815-1E27-1F2A998F6B6A</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CAFF8B22-E832-77D6-0ACD-3E8BC0CD69F4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6686CF3B-1FCE-3565-5552-BEB766C6BBA4" name="FK_CART_ITEM_CART">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7A279A72-C916-37AF-D0B0-A982F07B036A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="926B14F2-AB6F-9524-0369-7DAF12C7497D" name="FK_CART_ITEM_MEDICINE">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CF510B8E-FEBE-1842-3B9F-2C5D8840D299"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

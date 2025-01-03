@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.HerbalDAO">
+	
+	<select id="selectAllHerbal" resultType="herbalVO">
+		select medicine_id medicineID, name, description, seasonal_recommendation seasonalRecommendation
+		  from herbal_medicines
+	</select>
+	
+	<select id="selectHerbalBySR" resultType="herbalVO">
+		select medicine_id medicineID, name, description, seasonal_recommendation seasonalRecommendation
+		  from herbal_medicines
+		 where seasonal_recommendation='Y'
+	</select>
+	
+	<select id="selectHerbalByName" resultType="herbalVO">
+		select medicine_id medicineID, name, description, seasonal_recommendation seasonalRecommendation
+		  from herbal_medicines
+		 where name = #{name} 
+	</select>
+	
+	<delete id="deleteHerbal" parameterType="int">
+		delete from herbal_medicines
+		where medicine_id = #{medicineID}
+	</delete>
+	
+	<insert id="insertHerbal" parameterType="herbalVO">
+		insert into herbal_medicines
+		(
+		medicine_id, name, description, seasonal_recommendation
+		)
+		values
+		(
+		seq_herbal_id_no.nextval ,#{name}, #{description}, #{seasonalRecommendation}
+		)		
+	</insert>
+</mapper>

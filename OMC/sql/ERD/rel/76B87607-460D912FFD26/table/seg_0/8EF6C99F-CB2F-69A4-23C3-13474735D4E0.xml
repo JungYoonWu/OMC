@@ -1,0 +1,95 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8EF6C99F-CB2F-69A4-23C3-13474735D4E0" schemaObject="AD312CA1-C641-3DDE-02BD-03FEA48A3A6C" name="NOTICES">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>NOTICES</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>B7B725A9-7391-09E9-D6A3-9F1D81DD742A</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NOTICE_ID" id="940CCF23-EF17-AC4D-75D1-DB29CC8C4D0C">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>NOTICES</sourceObjSchema>
+<sourceObjName>NOTICE_ID</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>95006FEE-1DB0-EF25-4A01-B0720E86CDF6</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TITLE" id="4B38DBD0-BC2D-49C3-5674-1E93486BB058">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>NOTICES</sourceObjSchema>
+<sourceObjName>TITLE</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>AE8ED8B8-BAF1-B91B-EF5E-A247F96FE7C2</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CONTENT" id="0A68112B-8813-7BAB-DFA1-ED13F6AE98CE">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>NOTICES</sourceObjSchema>
+<sourceObjName>CONTENT</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>16B7DB68-3175-EB72-ED77-83532966C4A4</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REG_DATE" id="59FF2C11-87EA-8E55-62E2-D9F68BC185EA">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>NOTICES</sourceObjSchema>
+<sourceObjName>REG_DATE</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>A010D6E8-F862-80C0-7E7D-3AFD4BD324E3</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>sysdate</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E6A4C2CA-8686-154C-DE9A-42527C3B96F7" schemaObject="AD312CA1-C641-3DDE-02BD-03FEA48A3A6C" name="NOTICES_PK">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>SYS_C008420</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>95FA4AD5-8010-8B39-6E8A-4133212CF726</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="940CCF23-EF17-AC4D-75D1-DB29CC8C4D0C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

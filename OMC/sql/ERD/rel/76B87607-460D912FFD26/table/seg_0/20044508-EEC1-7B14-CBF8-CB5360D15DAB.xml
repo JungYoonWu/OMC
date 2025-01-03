@@ -1,0 +1,158 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="20044508-EEC1-7B14-CBF8-CB5360D15DAB" schemaObject="AD312CA1-C641-3DDE-02BD-03FEA48A3A6C" name="ORDERS">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>ORDERS</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>A45E941E-3812-49BE-905F-EA1A41ABE046</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ORDER_ID" id="316BD9EA-B004-6497-11BE-2CA4475DD6A3">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>ORDERS</sourceObjSchema>
+<sourceObjName>ORDER_ID</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>16DC5FBF-73CF-CFFF-51C5-DBCF9AD481BC</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USER_ID" id="D91DB601-1803-BA4A-7472-A4319E51F216">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>ORDERS</sourceObjSchema>
+<sourceObjName>USER_ID</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>9C5A8CE7-B934-8017-9F39-3F446D3977DC</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B251DBBA-8745-3330-656E-2FA4F7A42A54" referredColumn="8C261F6B-C486-1EA4-7D80-74B40FA6F4B3"/>
+</associations>
+</Column>
+<Column name="TOTAL_PRICE" id="BF7C9DB1-3250-B965-4BBB-2BCBD69240C9">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>ORDERS</sourceObjSchema>
+<sourceObjName>TOTAL_PRICE</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>FDCE5C80-8F63-510D-587D-0E144BB1D8A5</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ORDER_DATE" id="1A253EB7-226D-488E-C10A-475032E5214F">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>ORDERS</sourceObjSchema>
+<sourceObjName>ORDER_DATE</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>823E3D50-1278-878A-DB66-EC1171CDE7F3</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>sysdate</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STATUS" id="BAA39677-AE96-A5D5-B58A-13092A92DF20">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>ORDERS</sourceObjSchema>
+<sourceObjName>STATUS</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>61711C8B-9464-574B-2263-EBB08606ACDE</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DELIVERY_ADDRESS" id="691A7697-A84A-2AD5-7FE6-CE9824370968">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>ORDERS</sourceObjSchema>
+<sourceObjName>DELIVERY_ADDRESS</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>6E9605DD-4B3E-16B5-AA30-10C3272DE337</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CONTACT_NUMBER" id="226383F1-F062-2FEB-8573-B9ABA2342168">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>ORDERS</sourceObjSchema>
+<sourceObjName>CONTACT_NUMBER</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>8542BA91-1285-2BA8-54A8-F4C9A18AD0E3</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1B0F9DD8-1950-26CD-1E90-BEA6024F8C55" schemaObject="AD312CA1-C641-3DDE-02BD-03FEA48A3A6C" name="ORDERS_PK">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>SYS_C008429</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>54807C58-E1CC-5CC4-9118-CD857282EC32</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="316BD9EA-B004-6497-11BE-2CA4475DD6A3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="713F554F-D74A-7A5A-A53B-749E27B33D9C" name="FK_ORDER_USER">
+<createdBy>User</createdBy>
+<createdTime>2024-12-17 01:06:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D91DB601-1803-BA4A-7472-A4319E51F216"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

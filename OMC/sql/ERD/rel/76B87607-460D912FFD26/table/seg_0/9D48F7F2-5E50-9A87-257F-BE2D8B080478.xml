@@ -1,0 +1,143 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9D48F7F2-5E50-9A87-257F-BE2D8B080478" schemaObject="AD312CA1-C641-3DDE-02BD-03FEA48A3A6C" name="USERS">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>USERS</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-16 23:25:31 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="USER_ID" id="8C261F6B-C486-1EA4-7D80-74B40FA6F4B3">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>USER_ID</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-16 23:25:31 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAME" id="DEBA21C0-3F66-34A3-A6E0-080306726FF8">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>NAME</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-16 23:25:31 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="44C6EE2A-F57C-4213-41F4-847FF4814A54">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>EMAIL</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-16 23:25:31 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PASSWORD" id="8DDD073B-C980-5C57-3ABD-40ED96DAED4A">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>PASSWORD</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-16 23:25:31 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PHONE" id="D255A7A5-0440-A87F-031F-54CDD1AE6036">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>PHONE</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-16 23:25:31 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ROLE_ID" id="731F82CC-B93B-0430-A231-BA63672E5654">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>ROLE_ID</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-16 23:25:31 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="075BB3AD-7054-D7AB-0C91-139F679BB0D2" referredColumn="FD20D5D0-83B8-1551-F9FE-52F72CBCF80D"/>
+</associations>
+</Column>
+<Column name="USER_NO" id="3185A445-7EFA-836B-5355-FA917FD196AD">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>USER_NO</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-16 23:25:31 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6CD8CF62-DB86-AD7E-67DB-FA36EEAF2CB7" schemaObject="AD312CA1-C641-3DDE-02BD-03FEA48A3A6C" name="USERS_PK">
+<sourceConnName>OrientalMedicineClinic</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>SYS_C008391</sourceObjName>
+<createdBy>User</createdBy>
+<createdTime>2024-12-16 23:25:31 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8C261F6B-C486-1EA4-7D80-74B40FA6F4B3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AAFC65BB-72CA-26AC-F7F0-14DED4522548" name="FK_ROLES">
+<createdBy>User</createdBy>
+<createdTime>2024-12-16 23:31:05 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="731F82CC-B93B-0430-A231-BA63672E5654"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
